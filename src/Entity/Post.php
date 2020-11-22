@@ -20,21 +20,21 @@ class Post
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $title;
+    private $text;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getTitle(): ?string
+    public function getText(): ?string
     {
-        return $this->title;
+        return $this->text;
     }
 
-    public function setTitle(string $title): self
+    public function setText(string $text): self
     {
-        $this->title = $title;
+        $this->text = $text;
 
         return $this;
     }
