@@ -10,7 +10,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d7681f2-f1d6-4547-a328-cbacb0a9a267" name="Default Changelist" comment="" />
+    <list default="true" id="7d7681f2-f1d6-4547-a328-cbacb0a9a267" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/AppAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/AppAuthenticator.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,7 +136,7 @@
       <updated>1606071274437</updated>
       <workItem from="1606071275482" duration="7033000" />
       <workItem from="1606078700733" duration="2575000" />
-      <workItem from="1606149794799" duration="2979000" />
+      <workItem from="1606149794799" duration="4815000" />
     </task>
     <servers />
   </component>
@@ -148,6 +155,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="711" y="198" width="559" height="725" key="#com.intellij.ide.util.MemberChooser" timestamp="1606153376564">
+      <screen x="72" y="35" width="1848" height="1045" />
+    </state>
+    <state x="711" y="198" width="559" height="725" key="#com.intellij.ide.util.MemberChooser/72.35.1848.1045@72.35.1848.1045" timestamp="1606153376564" />
     <state x="663" y="258" width="655" height="605" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606152459858">
       <screen x="72" y="35" width="1848" height="1045" />
     </state>

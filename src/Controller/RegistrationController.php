@@ -28,7 +28,10 @@ class RegistrationController extends AbstractController
             $data = $form->getData();
 
             $user = new User();
-            $user->setUuid($data['username']);
+            $user->setEmail($data['email']);
+            $user->setFirstName($data['first_name']);
+            $user->setLastName($data['last_name']);
+            $user->setUuid($data['first_name'] . $data['last_name']);
             $user->setPassword(
                 $passwordEncoder->encodePassword($user, $data['password'])
             );

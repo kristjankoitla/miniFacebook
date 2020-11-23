@@ -24,6 +24,21 @@ class User implements UserInterface
     private $uuid;
 
     /**
+     * @ORM\Column(type="string", length=180, unique=true)
+     */
+    private $email;
+
+    /**
+     * @ORM\Column(type="string", length=180, unique=false)
+     */
+    private $firstName;
+
+    /**
+     * @ORM\Column(type="string", length=180, unique=false)
+     */
+    private $lastName;
+
+    /**
      * @ORM\Column(type="json")
      */
     private $roles = [];
@@ -49,6 +64,36 @@ class User implements UserInterface
         $this->uuid = $uuid;
 
         return $this;
+    }
+
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    public function setEmail($email): void
+    {
+        $this->email = $email;
+    }
+
+    public function getFirstName()
+    {
+        return $this->firstName;
+    }
+
+    public function setFirstName($firstName): void
+    {
+        $this->firstName = $firstName;
+    }
+
+    public function getLastName()
+    {
+        return $this->lastName;
+    }
+
+    public function setLastName($lastName): void
+    {
+        $this->lastName = $lastName;
     }
 
     /**
