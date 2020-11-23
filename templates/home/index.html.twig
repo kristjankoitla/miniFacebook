@@ -3,4 +3,9 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
+    {% for post in posts %}
+        <div>
+            {{ post.id }} - {{ post.text }}
+        </div>
+    {% endfor %}
 {% endblock %}
