@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="7d7681f2-f1d6-4547-a328-cbacb0a9a267" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/AppAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/AppAuthenticator.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,17 +133,36 @@
       <updated>1606071274437</updated>
       <workItem from="1606071275482" duration="7033000" />
       <workItem from="1606078700733" duration="2575000" />
-      <workItem from="1606149794799" duration="931000" />
+      <workItem from="1606149794799" duration="2665000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
+    <state x="663" y="258" width="655" height="605" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606152459858">
+      <screen x="72" y="35" width="1848" height="1045" />
+    </state>
+    <state x="663" y="258" width="655" height="605" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.35.1848.1045@72.35.1848.1045" timestamp="1606152459858" />
     <state x="476" y="243" width="1030" height="635" key="IDE.errors.dialog" timestamp="1606073573542">
       <screen x="72" y="35" width="1848" height="1045" />
     </state>
     <state x="476" y="243" width="1030" height="635" key="IDE.errors.dialog/72.35.1848.1045@72.35.1848.1045" timestamp="1606073573542" />
+    <state x="640" y="222" width="701" height="677" key="NewPhpClassDialog" timestamp="1606152291485">
+      <screen x="72" y="35" width="1848" height="1045" />
+    </state>
+    <state x="640" y="222" width="701" height="677" key="NewPhpClassDialog/72.35.1848.1045@72.35.1848.1045" timestamp="1606152291485" />
   </component>
 </project>
