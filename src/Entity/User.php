@@ -39,6 +39,16 @@ class User implements UserInterface
     private $lastName;
 
     /**
+     * @ORM\Column(type="string", length=180, unique=false)
+     */
+    private $city;
+
+    /**
+     * @ORM\Column(type="string", length=180, unique=false)
+     */
+    private $about;
+
+    /**
      * @ORM\Column(type="json")
      */
     private $roles = [];
@@ -94,6 +104,26 @@ class User implements UserInterface
     public function setLastName($lastName): void
     {
         $this->lastName = $lastName;
+    }
+
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    public function setCity($city): void
+    {
+        $this->city = $city;
+    }
+
+    public function getAbout()
+    {
+        return $this->about;
+    }
+
+    public function setAbout($about): void
+    {
+        $this->about = $about;
     }
 
     /**
