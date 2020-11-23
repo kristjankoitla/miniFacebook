@@ -30,12 +30,18 @@
                 <div class="navbar-end">
                     <div class="navbar-item">
                         <div class="buttons">
-                            <a class="button is-primary" href="">
-                                <strong>Sign up</strong>
-                            </a>
-                            <a class="button is-light" href="">
-                                Log in
-                            </a>
+                            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                                <a class="button is-light" href="{{ path('app_logout') }}">
+                                    Log out
+                                </a>
+                            {% else %}
+                                <a class="button is-primary" href="{{ path('register') }}">
+                                    <strong>Sign up</strong>
+                                </a>
+                                <a class="button is-light" href="{{ path('app_login') }}">
+                                    Log in
+                                </a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
