@@ -19,6 +19,19 @@ class PostRepository extends ServiceEntityRepository
         parent::__construct($registry, Post::class);
     }
 
+    public function findByUser(int $id) {
+        $qb = $this->createQueryBuilder('p');
+        $qb->select('p.text')
+            ->addSelect('u.id AS user_id')
+            ->addSelect('p.id AS post_id')
+            ->orderBy('p.id', 'DESC')
+            ->innerJoin('p.user', 'u')
+            ->where('u.id = :id')
+            ->setParameter('id', $id);
+
+        return $qb->getQuery()->getResult();
+    }
+
     // /**
     //  * @return Post[] Returns an array of Post objects
     //  */
