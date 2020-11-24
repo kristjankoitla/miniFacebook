@@ -21,4 +21,9 @@
     <div>
         {{ user.about }}
     </div>
+    {% for post in user.post %}
+        <div>
+            {{ post.text }}
+        </div>
+    {% endfor %}
 {% endblock %}

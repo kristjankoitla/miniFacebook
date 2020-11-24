@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -39,12 +40,12 @@ class User implements UserInterface
     private $lastName;
 
     /**
-     * @ORM\Column(type="string", length=180, unique=false)
+     * @ORM\Column(type="string", length=180, unique=false, nullable=true)
      */
     private $city;
 
     /**
-     * @ORM\Column(type="string", length=180, unique=false)
+     * @ORM\Column(type="string", length=180, unique=false, nullable=true)
      */
     private $about;
 
@@ -58,6 +59,11 @@ class User implements UserInterface
      * @ORM\Column(type="string")
      */
     private $password;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Post", mappedBy="user")
+     */
+    private $post;
 
     public function getId(): ?int
     {
@@ -168,6 +174,11 @@ class User implements UserInterface
         $this->password = $password;
 
         return $this;
+    }
+
+    public function getPost(): Collection
+    {
+        return $this->post;
     }
 
     /**

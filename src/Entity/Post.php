@@ -18,6 +18,11 @@ class Post
     private $id;
 
     /**
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="post")
+     */
+    private $user;
+
+    /**
      * @ORM\Column(type="string", length=255)
      */
     private $text;
@@ -25,6 +30,16 @@ class Post
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    public function setUser($user): void
+    {
+        $this->user = $user;
     }
 
     public function getText(): ?string

@@ -12,6 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7d7681f2-f1d6-4547-a328-cbacb0a9a267" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/profile/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile/index.html.twig" afterDir="false" />
     </list>
@@ -133,7 +135,7 @@
       <updated>1606071274437</updated>
       <workItem from="1606071275482" duration="7033000" />
       <workItem from="1606078700733" duration="2575000" />
-      <workItem from="1606149794799" duration="6346000" />
+      <workItem from="1606149794799" duration="10092000" />
     </task>
     <servers />
   </component>
@@ -152,10 +154,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="711" y="198" width="559" height="725" key="#com.intellij.ide.util.MemberChooser" timestamp="1606155598679">
+    <state x="711" y="198" width="559" height="725" key="#com.intellij.ide.util.MemberChooser" timestamp="1606230372793">
       <screen x="72" y="35" width="1848" height="1045" />
     </state>
-    <state x="711" y="198" width="559" height="725" key="#com.intellij.ide.util.MemberChooser/72.35.1848.1045@72.35.1848.1045" timestamp="1606155598679" />
+    <state x="711" y="198" width="559" height="725" key="#com.intellij.ide.util.MemberChooser/72.35.1848.1045@72.35.1848.1045" timestamp="1606230372793" />
     <state x="663" y="258" width="655" height="605" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606152459858">
       <screen x="72" y="35" width="1848" height="1045" />
     </state>
@@ -168,5 +170,9 @@
       <screen x="72" y="35" width="1848" height="1045" />
     </state>
     <state x="640" y="222" width="701" height="677" key="NewPhpClassDialog/72.35.1848.1045@72.35.1848.1045" timestamp="1606152291485" />
+    <state x="575" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1606230270158">
+      <screen x="72" y="35" width="1848" height="1045" />
+    </state>
+    <state x="575" y="45" width="840" height="1034" key="search.everywhere.popup/72.35.1848.1045@72.35.1848.1045" timestamp="1606230270158" />
   </component>
 </project>
