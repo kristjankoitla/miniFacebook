@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
 use App\Form\ProfileEditType;
 use App\Repository\PostRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -17,12 +18,12 @@ use Symfony\Component\Security\Core\User\UserInterface;
 class ProfileController extends AbstractController
 {
     /**
-     * @Route("/", name="index")
-     * @param UserInterface $user
+     * @Route("/view/{uuid}", name="view")
+     * @param User $user
      * @param PostRepository $repository
      * @return Response
      */
-    public function index(UserInterface $user, PostRepository $repository): Response
+    public function index(User $user, PostRepository $repository): Response
     {
         $posts = $repository->findByUser($user->getUsername());
 
@@ -39,6 +40,7 @@ class ProfileController extends AbstractController
      * @return Response
      */
     public function edit(Request $request, UserInterface $user): Response
+    // todo: do I need a firewall rule here?
     {
         $form = $this->createForm(ProfileEditType::class, $user);
 

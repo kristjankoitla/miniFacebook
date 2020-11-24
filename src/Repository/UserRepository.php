@@ -28,6 +28,7 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
             ->addSelect('u.firstName')
             ->addSelect('u.lastName')
             ->where('CONCAT(u.firstName, u.lastName) LIKE :word')
+            ->orWhere('u.city LIKE :word')
             ->setParameter('word', '%'.$string.'%');
 
         return $qb->getQuery()->getResult();
