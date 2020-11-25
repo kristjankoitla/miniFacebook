@@ -15,13 +15,6 @@ use Symfony\Component\Security\Core\User\UserInterface;
  */
 class PostController extends AbstractController
 {
-    /**
-     * @Route("/", name="index")
-     */
-    public function index(): Response
-    {
-        return $this->render('post/index.html.twig');
-    }
 
     /**
      * @Route("/create", name="create")
