@@ -56,10 +56,10 @@ class SecurityController extends AbstractController
         if ($form->isSubmitted()) {
             $data = $form->getData();
 
-            $uuid = strtolower($data['first_name']) . '.' . strtolower($data['last_name']);
+            $uuid = strtolower($data['first_name']) . '-' . strtolower($data['last_name']);
             $userCount = count($userRepository->findByUuid($uuid));
             if ($userCount >= 1) {
-                $uuid = $uuid . '.' . $userCount;
+                $uuid = $uuid . '-' . $userCount;
             }
 
             $user = new User();
