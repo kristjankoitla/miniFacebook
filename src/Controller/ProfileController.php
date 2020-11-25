@@ -24,19 +24,22 @@ class ProfileController extends AbstractController
     /**
      * @Route("/view/{uuid}", name="view")
      * @param Request $request
-     * @param UserInterface $currentUser
      * @param User $user
      * @param PostRepository $postRepository
      * @param FriendshipRepository $friendshipRepository
      * @return Response
      */
-    public function index(Request $request, UserInterface $currentUser, User $user, PostRepository $postRepository, FriendshipRepository $friendshipRepository): Response
+    public function index(Request $request, User $user, PostRepository $postRepository, FriendshipRepository $friendshipRepository): Response
     {
-        $friendships = $friendshipRepository->findFriendshipByUserIds($currentUser->getUsername(), $user->getUsername());
+        $friendships = $friendshipRepository->findFriendshipByUsers($this->getUser(), $user);
 
-        $form = $this->doFriendship($request, $currentUser, $user, $friendships);
+        $form = $this->doFriendship($request, $this->getUser(), $user, $friendships);
 
-        $posts = $postRepository->findByUser($user->getUsername());
+        if ($form->isSubmitted()) {
+            return $this->redirect($request->getUri());
+        }
+
+        $posts = $postRepository->findByUser($user);
 
         return $this->render('profile/index.html.twig', [
             'form' => $form->createView(),

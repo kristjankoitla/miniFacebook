@@ -15,7 +15,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7d7681f2-f1d6-4547-a328-cbacb0a9a267" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/FriendshipRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/FriendshipRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/PostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PostRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -153,7 +154,7 @@
       <workItem from="1606071275482" duration="7033000" />
       <workItem from="1606078700733" duration="2575000" />
       <workItem from="1606149794799" duration="14808000" />
-      <workItem from="1606316268816" duration="16898000" />
+      <workItem from="1606316268816" duration="17558000" />
     </task>
     <servers />
   </component>
@@ -201,10 +202,10 @@
       <screen x="72" y="35" width="1848" height="1045" />
     </state>
     <state x="927" y="244" width="701" height="677" key="NewPhpClassDialog/72.35.1848.1045@72.35.1848.1045" timestamp="1606260967588" />
-    <state x="608" y="221" width="977" height="672" key="find.popup" timestamp="1606271475347">
+    <state x="608" y="221" width="977" height="672" key="find.popup" timestamp="1606345689775">
       <screen x="72" y="35" width="1848" height="1045" />
     </state>
-    <state x="608" y="221" width="977" height="672" key="find.popup/72.35.1848.1045@72.35.1848.1045" timestamp="1606271475347" />
+    <state x="608" y="221" width="977" height="672" key="find.popup/72.35.1848.1045@72.35.1848.1045" timestamp="1606345689775" />
     <state x="575" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1606277825473">
       <screen x="72" y="35" width="1848" height="1045" />
     </state>

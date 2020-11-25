@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Post;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @method Post|null find($id, $lockMode = null, $lockVersion = null)
@@ -19,7 +20,7 @@ class PostRepository extends ServiceEntityRepository
         parent::__construct($registry, Post::class);
     }
 
-    public function findByUser(int $id) {
+    public function findByUser(UserInterface $user) {
         $qb = $this->createQueryBuilder('p');
         $qb->select('p.text')
             ->addSelect('u.id AS user_id')
@@ -27,12 +28,12 @@ class PostRepository extends ServiceEntityRepository
             ->orderBy('p.id', 'DESC')
             ->innerJoin('p.user', 'u')
             ->where('u.id = :id')
-            ->setParameter('id', $id);
+            ->setParameter('id', $user->getUsername());
 
         return $qb->getQuery()->getResult();
     }
 
-    public function findFriendsPosts($user) {
+    public function findFriendsPosts(UserInterface $user) {
         return $this->createQueryBuilder('p')
             ->select('p')
             ->leftJoin('App\Entity\Friendship', 'f', 'WITH', 'p.user = f.receiver OR p.user = f.initiator')
