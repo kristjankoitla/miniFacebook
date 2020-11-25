@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\UserType;
+use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -46,7 +47,7 @@ class SecurityController extends AbstractController
      * @param UserPasswordEncoderInterface $passwordEncoder
      * @return Response
      */
-    public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder): Response
+    public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder, UserRepository $userRepository): Response
     {
         $form = $this->createForm(UserType::class);
 
@@ -55,11 +56,17 @@ class SecurityController extends AbstractController
         if ($form->isSubmitted()) {
             $data = $form->getData();
 
+            $uuid = strtolower($data['first_name']) . '.' . strtolower($data['last_name']);
+            $userCount = count($userRepository->findByUuid($uuid));
+            if ($userCount >= 1) {
+                $uuid = $uuid . '.' . $userCount;
+            }
+
             $user = new User();
             $user->setEmail($data['email']);
             $user->setFirstName($data['first_name']);
             $user->setLastName($data['last_name']);
-            $user->setUuid($data['first_name'] . $data['last_name']);
+            $user->setUuid($uuid);
             $user->setPassword(
                 $passwordEncoder->encodePassword($user, $data['password'])
             );
