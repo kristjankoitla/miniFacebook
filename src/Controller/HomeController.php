@@ -16,7 +16,8 @@ class HomeController extends AbstractController
      */
     public function index(PostRepository $repository): Response
     {
-        $posts = $repository->findAll();
+        $posts = $repository->findFriendsPosts($this->getUser());
+
         return $this->render('home/index.html.twig', [
             'posts' => $posts
         ]);
