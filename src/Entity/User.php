@@ -65,6 +65,11 @@ class User implements UserInterface
      */
     private $post;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Friendship", mappedBy="user")
+     */
+    private $friendship;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -179,6 +184,11 @@ class User implements UserInterface
     public function getPost(): Collection
     {
         return $this->post;
+    }
+
+    public function getFriendship(): Collection
+    {
+        return $this->friendship;
     }
 
     /**

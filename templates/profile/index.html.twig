@@ -26,4 +26,7 @@
             {{ post.text }}
         </div>
     {% endfor %}
+    {% if app.user.uuid != user.uuid %}
+        {{ form(form) }}
+    {% endif %}
 {% endblock %}
