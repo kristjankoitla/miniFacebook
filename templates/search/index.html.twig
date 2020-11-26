@@ -1,9 +1,29 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    {% for user in users %}
-        <div>
-            {{ user.firstName }} {{ user.lastName }}
+    <div class="section">
+        <div class="container is-max-desktop">
+            {% for user in users %}
+                <div class="box">
+                    <a class="card-href" href="{{ path('profile.view', {'uuid':user.uuid}) }}"></a>
+                    <article class="media">
+                        <figure class="media-left">
+                            <p class="image is-64x64">
+                                <img src="https://bulma.io/images/placeholders/128x128.png">
+                            </p>
+                        </figure>
+                        <div class="media-content">
+                            <div class="content">
+                                <p>
+                                    <strong>{{ user.firstName }} {{ user.lastName }}</strong> <small>{{ user.city }}</small>
+                                    <br>
+                                    {{ user.about }}
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            {% endfor %}
         </div>
-    {% endfor %}
+    </div>
 {% endblock %}

@@ -33,9 +33,7 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
 
     public function findByString(string $string) {
         $qb = $this->createQueryBuilder('u')
-            ->select('u.uuid')
-            ->addSelect('u.firstName')
-            ->addSelect('u.lastName')
+            ->select('u')
             ->where('CONCAT(u.firstName, u.lastName) LIKE :word')
             ->orWhere('u.city LIKE :word')
             ->setParameter('word', '%'.$string.'%');

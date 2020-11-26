@@ -18,17 +18,19 @@
                 </div>
             </div>
 
-            <a class="navbar-item" href="{{ path('home') }}">
-                Home
-            </a>
+            <div class="navbar-item">
+                <a class="button is-light" href="{{ path('home') }}">
+                    Home
+                </a>
+            </div>
         </div>
 
         <div class="navbar-end">
             <div class="navbar-item">
                 <div class="buttons">
                     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                        <a class="button is-light" href="{{ path('profile.view', { 'uuid':app.user.uuid }) }}">{{ app.user.firstName }} {{ app.user.lastName }}</a>
-                        <a class="button is-white" href="{{ path('app_logout') }}">
+                        <a class="button is-white" href="{{ path('profile.view', { 'uuid':app.user.uuid }) }}">{{ app.user.firstName }} {{ app.user.lastName }}</a>
+                        <a class="button is-light" href="{{ path('app_logout') }}">
                             Log out
                         </a>
                     {% else %}
