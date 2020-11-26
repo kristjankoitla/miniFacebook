@@ -6,6 +6,7 @@ use App\Entity\Like;
 use App\Entity\Post;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @method Like|null find($id, $lockMode = null, $lockVersion = null)
@@ -25,6 +26,15 @@ class LikeRepository extends ServiceEntityRepository
             ->select('l')
             ->where('l.post = :post')
             ->setParameter('post', $post)
+            ->getQuery()->getResult();
+    }
+
+    public function getUserLikeForPost(UserInterface $user, Post $post) {
+        return $this->createQueryBuilder('l')
+            ->select('l')
+            ->where('l.post = :post AND l.user = :user')
+            ->setParameter('post', $post)
+            ->setParameter('user', $user)
             ->getQuery()->getResult();
     }
 

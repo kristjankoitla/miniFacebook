@@ -26,6 +26,7 @@ class CommentRepository extends ServiceEntityRepository
             ->leftJoin('c.post', 'p')
             ->where('p = :post')
             ->setParameter('post', $post)
+            ->orderBy('c.id', 'DESC')
             ->getQuery()->getResult();
     }
 
