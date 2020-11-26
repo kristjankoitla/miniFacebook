@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Post;
 use App\Form\PostType;
+use App\Repository\CommentRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -46,11 +47,15 @@ class PostController extends AbstractController
     /**
      * @Route("/show/{id}", name="show")
      * @param Post $post
+     * @param CommentRepository $repository
+     * @return Response
      */
-    public function show(Post $post)
+    public function show(Post $post, CommentRepository $repository)
     {
+        $comments = $repository->findCommentsOnPost($post);
         return $this->render('post/show.html.twig', [
-            'post' => $post
+            'post' => $post,
+            'comments' => $comments
         ]);
     }
 

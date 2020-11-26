@@ -27,6 +27,20 @@ class Post
      */
     private $text;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Like", mappedBy="post")
+     */
+    private $like;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Comment", mappedBy="post")
+     */
+    private $comment;
+
+    private $likeCount;
+
+    private $commentCount;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -53,4 +67,25 @@ class Post
 
         return $this;
     }
+
+    public function getLikeCount()
+    {
+        return $this->likeCount;
+    }
+
+    public function setLikeCount($likeCount): void
+    {
+        $this->likeCount = $likeCount;
+    }
+
+    public function getCommentCount()
+    {
+        return $this->commentCount;
+    }
+
+    public function setCommentCount($commentCount): void
+    {
+        $this->commentCount = $commentCount;
+    }
+
 }

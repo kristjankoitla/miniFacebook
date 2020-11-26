@@ -1,5 +1,17 @@
 {% extends('base.html.twig') %}
 
 {% block body %}
-    {{ post.text }}
+    <div class="section">
+        <div class="container is-max-desktop">
+            <div class="box">
+                {{ post.text }}
+            </div>
+            {% for comment in comments %}
+                <div class="box">
+                    {{ comment.text }}
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
 {% endblock %}

@@ -66,6 +66,16 @@ class User implements UserInterface
     private $post;
 
     /**
+     * @ORM\OneToMany(targetEntity="Like", mappedBy="user")
+     */
+    private $like;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Comment", mappedBy="user")
+     */
+    private $comment;
+
+    /**
      * @ORM\OneToMany(targetEntity="Friendship", mappedBy="user")
      */
     private $friendship;
