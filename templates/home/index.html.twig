@@ -3,9 +3,9 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-    {% for post in posts %}
-        <div>
-            {{ post.id }} - {{ post.text }}
-        </div>
-    {% endfor %}
+    <div class="container is-max-desktop mt-6">
+        {% for post in posts %}
+            {% include 'post/post.html.twig' %}
+        {% endfor %}
+    </div>
 {% endblock %}

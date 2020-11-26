@@ -44,6 +44,17 @@ class PostController extends AbstractController
     }
 
     /**
+     * @Route("/show/{id}", name="show")
+     * @param Post $post
+     */
+    public function show(Post $post)
+    {
+        return $this->render('post/show.html.twig', [
+            'post' => $post
+        ]);
+    }
+
+    /**
      * @Route("/remove/{id}", name="remove")
      * @param Post $post
      */
