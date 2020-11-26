@@ -15,8 +15,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7d7681f2-f1d6-4547-a328-cbacb0a9a267" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/post/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/PostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PostRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +159,7 @@
       <workItem from="1606071275482" duration="7033000" />
       <workItem from="1606078700733" duration="2575000" />
       <workItem from="1606149794799" duration="14808000" />
-      <workItem from="1606316268816" duration="44143000" />
+      <workItem from="1606316268816" duration="47512000" />
     </task>
     <servers />
   </component>
@@ -209,10 +211,10 @@
       <screen x="72" y="35" width="1848" height="1045" />
     </state>
     <state x="360" y="105" width="1271" height="912" key="SettingsEditor/72.35.1848.1045@72.35.1848.1045" timestamp="1606359519368" />
-    <state x="608" y="221" width="977" height="672" key="find.popup" timestamp="1606377310758">
+    <state x="608" y="221" width="977" height="672" key="find.popup" timestamp="1606384428825">
       <screen x="72" y="35" width="1848" height="1045" />
     </state>
-    <state x="608" y="221" width="977" height="672" key="find.popup/72.35.1848.1045@72.35.1848.1045" timestamp="1606377310758" />
+    <state x="608" y="221" width="977" height="672" key="find.popup/72.35.1848.1045@72.35.1848.1045" timestamp="1606384428825" />
     <state x="576" y="250" key="run.anything.popup" timestamp="1606349854920">
       <screen x="72" y="35" width="1848" height="1045" />
     </state>

@@ -22,9 +22,7 @@ class PostRepository extends ServiceEntityRepository
 
     public function findByUser(UserInterface $user) {
         $qb = $this->createQueryBuilder('p');
-        $qb->select('p.text')
-            ->addSelect('u.id AS user_id')
-            ->addSelect('p.id AS post_id')
+        $qb->select('p')
             ->orderBy('p.id', 'DESC')
             ->innerJoin('p.user', 'u')
             ->where('u.id = :id')

@@ -3,30 +3,37 @@
 {% block title %}Hello ProfileController!{% endblock %}
 
 {% block body %}
-    <div>
-        {{ user.firstName }}
-    </div>
-    <div>
-        {{ user.lastName }}
-    </div>
-    <div>
-        {{ user.email }}
-    </div>
-    <div>
-        {{ user.uuid }}
-    </div>
-    <div>
-        {{ user.city }}
-    </div>
-    <div>
-        {{ user.about }}
-    </div>
-    {% for post in posts %}
-        <div>
-            {{ post.text }}
+    <section class="hero is-white">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    {{ user.firstName }} {{ user.lastName }}
+                    {% if app.user.uuid == user.uuid %}
+                        <a href="{{ path('profile.edit') }}"><i class="fas fa-user-edit"></i></a>
+                    {% endif %}
+                </h1>
+                <h2 class="subtitle">
+                    {{ user.city }}
+                </h2>
+                {% if app.user.uuid == user.uuid %}
+                    <div>
+                        Email: {{ user.email }}
+                    </div>
+                {% endif %}
+                <div>
+                    About: {{ user.about }}
+                </div>
+                <div>
+                    {% if app.user.uuid != user.uuid %}
+                        {{ form(form) }}
+                    {% endif %}
+                </div>
+            </div>
         </div>
-    {% endfor %}
-    {% if app.user.uuid != user.uuid %}
-        {{ form(form) }}
-    {% endif %}
+    </section>
+    <div class="container is-max-desktop mt-6">
+        {% for post in posts %}
+            {% include 'post/post.html.twig' %}
+        {% endfor %}
+    </div>
 {% endblock %}

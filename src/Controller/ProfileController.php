@@ -66,6 +66,8 @@ class ProfileController extends AbstractController
 
             $em->persist($user);
             $em->flush();
+
+            return $this->redirect($this->generateUrl('profile.view', ['uuid' => $this->getUser()->getUuid()]));
         }
 
         return $this->render('profile/edit.html.twig', [
