@@ -25,6 +25,11 @@ class User implements UserInterface
     private $uuid;
 
     /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    private $image;
+
+    /**
      * @ORM\Column(type="string", length=180, unique=true)
      */
     private $email;
@@ -95,6 +100,16 @@ class User implements UserInterface
         $this->uuid = $uuid;
 
         return $this;
+    }
+
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    public function setImage($image): void
+    {
+        $this->image = $image;
     }
 
     public function getEmail()

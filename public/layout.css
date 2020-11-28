@@ -10,3 +10,7 @@ body {
     max-height: 500px;
     object-fit: contain;
 }
+.profile-image img {
+    max-height: 150px;
+    object-fit: contain;
+}

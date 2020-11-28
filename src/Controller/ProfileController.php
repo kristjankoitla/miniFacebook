@@ -63,6 +63,18 @@ class ProfileController extends AbstractController
 
         if ($form->isSubmitted()) {
             $em = $this->getDoctrine()->getManager();
+            $file = $request->files->get('profile_edit')['image'];
+
+            if ($file) {
+                $filename = md5(uniqid()) . '.' . $file->getClientOriginalExtension();
+
+                $file->move(
+                    $this->getParameter('uploads_dir'),
+                    $filename
+                );
+
+                $user->setImage($filename);
+            }
 
             $em->persist($user);
             $em->flush();

@@ -5,28 +5,39 @@
 {% block body %}
     <section class="hero is-white">
         <div class="hero-body">
-            <div class="container">
-                <h1 class="title">
-                    {{ user.firstName }} {{ user.lastName }}
-                    {% if app.user.uuid == user.uuid %}
-                        <a href="{{ path('profile.edit') }}"><i class="fas fa-user-edit"></i></a>
-                    {% endif %}
-                </h1>
-                <h2 class="subtitle">
-                    {{ user.city }}
-                </h2>
-                {% if app.user.uuid == user.uuid %}
-                    <div>
-                        Email: {{ user.email }}
-                    </div>
-                {% endif %}
-                <div>
-                    About: {{ user.about }}
+            <div class="container columns">
+                <div class="column is-one-fifth">
+                    <figure class="image profile-image">
+                        {% if user.image %}
+                            <img src="{{ '/uploads/' ~ user.image }}" alt="Placeholder image">
+                        {% else %}
+                            <img src="https://reactnativecode.com/wp-content/uploads/2018/02/Default_Image_Thumbnail.png" alt="Contact Moses">
+                        {% endif %}
+                    </figure>
                 </div>
-                <div>
-                    {% if app.user.uuid != user.uuid %}
-                        {{ form(form) }}
+                <div class="column">
+                    <h1 class="title">
+                        {{ user.firstName }} {{ user.lastName }}
+                        {% if app.user.uuid == user.uuid %}
+                            <a href="{{ path('profile.edit') }}"><i class="fas fa-user-edit"></i></a>
+                        {% endif %}
+                    </h1>
+                    <h2 class="subtitle">
+                        {{ user.city }}
+                    </h2>
+                    {% if app.user.uuid == user.uuid %}
+                        <div>
+                            Email: {{ user.email }}
+                        </div>
                     {% endif %}
+                    <div>
+                        About: {{ user.about }}
+                    </div>
+                    <div>
+                        {% if app.user.uuid != user.uuid %}
+                            {{ form(form) }}
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>

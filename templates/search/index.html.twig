@@ -9,7 +9,11 @@
                     <article class="media">
                         <figure class="media-left">
                             <p class="image is-64x64">
-                                <img src="https://bulma.io/images/placeholders/128x128.png">
+                                {% if user.image %}
+                                    <img src="{{ '/uploads/' ~ user.image }}" alt="The vowel game">
+                                {% else %}
+                                    <img src="https://reactnativecode.com/wp-content/uploads/2018/02/Default_Image_Thumbnail.png" alt="Contact Moses">
+                                {% endif %}
                             </p>
                         </figure>
                         <div class="media-content">
