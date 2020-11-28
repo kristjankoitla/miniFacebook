@@ -8,4 +8,5 @@
 /var/
 /vendor/
 /public/router.php
+/public/uploads/
 ###< symfony/framework-bundle ###

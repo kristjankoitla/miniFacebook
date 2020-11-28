@@ -15,7 +15,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7d7681f2-f1d6-4547-a328-cbacb0a9a267" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/post/post.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/post/post.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +161,7 @@
       <workItem from="1606078700733" duration="2575000" />
       <workItem from="1606149794799" duration="14808000" />
       <workItem from="1606316268816" duration="47686000" />
-      <workItem from="1606579632979" duration="2306000" />
+      <workItem from="1606579632979" duration="6096000" />
     </task>
     <servers />
   </component>
@@ -181,10 +185,10 @@
       <screen x="72" y="35" width="1848" height="1045" />
     </state>
     <state x="450" y="208" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.35.1848.1045@72.35.1848.1045" timestamp="1606270393494" />
-    <state x="711" y="198" width="559" height="739" key="#com.intellij.ide.util.MemberChooser" timestamp="1606369663168">
+    <state x="711" y="198" width="559" height="739" key="#com.intellij.ide.util.MemberChooser" timestamp="1606583073407">
       <screen x="72" y="35" width="1848" height="1045" />
     </state>
-    <state x="711" y="198" width="559" height="739" key="#com.intellij.ide.util.MemberChooser/72.35.1848.1045@72.35.1848.1045" timestamp="1606369663168" />
+    <state x="711" y="198" width="559" height="739" key="#com.intellij.ide.util.MemberChooser/72.35.1848.1045@72.35.1848.1045" timestamp="1606583073407" />
     <state x="72" y="35" width="728" height="1045" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606265033926">
       <screen x="72" y="35" width="1848" height="1045" />
     </state>
@@ -209,18 +213,18 @@
       <screen x="72" y="35" width="1848" height="1045" />
     </state>
     <state x="360" y="105" width="1271" height="912" key="SettingsEditor/72.35.1848.1045@72.35.1848.1045" timestamp="1606359519368" />
-    <state x="608" y="221" width="977" height="672" key="find.popup" timestamp="1606384428825">
+    <state x="653" y="234" width="977" height="672" key="find.popup" timestamp="1606583560469">
       <screen x="72" y="35" width="1848" height="1045" />
     </state>
-    <state x="608" y="221" width="977" height="672" key="find.popup/72.35.1848.1045@72.35.1848.1045" timestamp="1606384428825" />
+    <state x="653" y="234" width="977" height="672" key="find.popup/72.35.1848.1045@72.35.1848.1045" timestamp="1606583560469" />
     <state x="576" y="250" key="run.anything.popup" timestamp="1606349854920">
       <screen x="72" y="35" width="1848" height="1045" />
     </state>
     <state x="576" y="250" key="run.anything.popup/72.35.1848.1045@72.35.1848.1045" timestamp="1606349854920" />
-    <state x="575" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1606373088017">
+    <state x="575" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1606583544060">
       <screen x="72" y="35" width="1848" height="1045" />
     </state>
-    <state x="575" y="45" width="840" height="1034" key="search.everywhere.popup/72.35.1848.1045@72.35.1848.1045" timestamp="1606373088017" />
+    <state x="575" y="45" width="840" height="1034" key="search.everywhere.popup/72.35.1848.1045@72.35.1848.1045" timestamp="1606583544060" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

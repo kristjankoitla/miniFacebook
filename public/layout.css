@@ -6,3 +6,7 @@
 body {
     min-height: 100vh;
 }
+.card-image img {
+    max-height: 500px;
+    object-fit: contain;
+}

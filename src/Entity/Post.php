@@ -37,6 +37,11 @@ class Post
      */
     private $comment;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $image;
+
     private $likeCount;
 
     private $commentCount;
@@ -66,6 +71,16 @@ class Post
         $this->text = $text;
 
         return $this;
+    }
+
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    public function setImage($image): void
+    {
+        $this->image = $image;
     }
 
     public function getLikeCount()
