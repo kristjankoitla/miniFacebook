@@ -4,7 +4,7 @@
     <div class="section">
         <div class="container is-max-desktop">
             {% for user in users %}
-                <div class="box">
+                <div class="box relative">
                     <a class="card-href" href="{{ path('profile.view', {'uuid':user.uuid}) }}"></a>
                     <article class="media">
                         <figure class="media-left">
