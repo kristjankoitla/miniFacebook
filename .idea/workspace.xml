@@ -14,9 +14,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d7681f2-f1d6-4547-a328-cbacb0a9a267" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ProfileEditType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProfileEditType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +135,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -159,7 +157,7 @@
       <workItem from="1606149794799" duration="14808000" />
       <workItem from="1606316268816" duration="47686000" />
       <workItem from="1606579632979" duration="9492000" />
-      <workItem from="1606666931870" duration="2491000" />
+      <workItem from="1606666931870" duration="7510000" />
     </task>
     <servers />
   </component>
@@ -207,22 +205,22 @@
       <screen x="72" y="35" width="1848" height="1045" />
     </state>
     <state x="927" y="244" width="701" height="684" key="NewPhpClassDialog/72.35.1848.1045@72.35.1848.1045" timestamp="1606357335537" />
-    <state x="360" y="105" width="1271" height="912" key="SettingsEditor" timestamp="1606359519368">
+    <state x="360" y="105" width="1271" height="912" key="SettingsEditor" timestamp="1606670425303">
       <screen x="72" y="35" width="1848" height="1045" />
     </state>
-    <state x="360" y="105" width="1271" height="912" key="SettingsEditor/72.35.1848.1045@72.35.1848.1045" timestamp="1606359519368" />
-    <state x="653" y="234" width="977" height="672" key="find.popup" timestamp="1606589177328">
+    <state x="360" y="105" width="1271" height="912" key="SettingsEditor/72.35.1848.1045@72.35.1848.1045" timestamp="1606670425303" />
+    <state x="653" y="234" width="977" height="672" key="find.popup" timestamp="1606670405221">
       <screen x="72" y="35" width="1848" height="1045" />
     </state>
-    <state x="653" y="234" width="977" height="672" key="find.popup/72.35.1848.1045@72.35.1848.1045" timestamp="1606589177328" />
+    <state x="653" y="234" width="977" height="672" key="find.popup/72.35.1848.1045@72.35.1848.1045" timestamp="1606670405221" />
     <state x="576" y="250" key="run.anything.popup" timestamp="1606349854920">
       <screen x="72" y="35" width="1848" height="1045" />
     </state>
     <state x="576" y="250" key="run.anything.popup/72.35.1848.1045@72.35.1848.1045" timestamp="1606349854920" />
-    <state x="575" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1606668389972">
+    <state x="575" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1606670816284">
       <screen x="72" y="35" width="1848" height="1045" />
     </state>
-    <state x="575" y="45" width="840" height="1034" key="search.everywhere.popup/72.35.1848.1045@72.35.1848.1045" timestamp="1606668389972" />
+    <state x="575" y="45" width="840" height="1034" key="search.everywhere.popup/72.35.1848.1045@72.35.1848.1045" timestamp="1606670816284" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
