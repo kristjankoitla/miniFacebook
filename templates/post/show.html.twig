@@ -6,7 +6,7 @@
             <div class="card">
                 <div class="card-image">
                     <figure class="image">
-                        <img src="{{ '/uploads/' ~ post.image }}" alt="Placeholder image">
+                        <img src="{{ imgSrc ~ '/uploads/' ~ post.image }}" alt="Placeholder image">
                     </figure>
                 </div>
                 <div class="card-content">
@@ -14,7 +14,7 @@
                         <div class="media-left">
                             <figure class="image is-96x96">
                                 {% if post.user.image %}
-                                    <img src="{{ '/uploads/' ~ post.user.image }}" alt="Placeholder image">
+                                    <img src="{{ imgSrc ~ '/uploads/' ~ post.user.image }}" alt="Placeholder image">
                                 {% else %}
                                     <img src="https://reactnativecode.com/wp-content/uploads/2018/02/Default_Image_Thumbnail.png" alt="Send help">
                                 {% endif %}
@@ -49,7 +49,7 @@
                         <figure class="media-left">
                             <p class="image is-64x64">
                                 {% if comment.user.image %}
-                                    <img src="{{ '/uploads/' ~ comment.user.image }}" alt="Ich bin God">
+                                    <img src="{{ imgSrc ~ '/uploads/' ~ comment.user.image }}" alt="Ich bin God">
                                 {% else %}
                                     <img src="https://reactnativecode.com/wp-content/uploads/2018/02/Default_Image_Thumbnail.png" alt="Contact Coke">
                                 {% endif %}

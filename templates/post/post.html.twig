@@ -3,7 +3,7 @@
     {% if post.image %}
         <div class="card-image">
             <figure class="image">
-                <img src="{{ '/uploads/' ~ post.image }}" alt="Placeholder image">
+                <img src="{{ imgSrc ~ '/uploads/' ~ post.image }}" alt="Placeholder image">
             </figure>
         </div>
     {% endif %}
@@ -12,7 +12,7 @@
             <div class="media-left">
                 <figure class="image is-48x48">
                     {% if post.user.image %}
-                        <img src="{{ '/uploads/' ~ post.user.image }}" alt="Contact God">
+                        <img src="{{ imgSrc ~ '/uploads/' ~ post.user.image }}" alt="Contact God">
                     {% else %}
                         <img src="https://reactnativecode.com/wp-content/uploads/2018/02/Default_Image_Thumbnail.png" alt="Contact Eminem">
                     {% endif %}
