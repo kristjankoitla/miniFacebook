@@ -15,8 +15,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7d7681f2-f1d6-4547-a328-cbacb0a9a267" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201125005458.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20201129191734.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/search/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/search/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +159,7 @@
       <workItem from="1606149794799" duration="14808000" />
       <workItem from="1606316268816" duration="47686000" />
       <workItem from="1606579632979" duration="9492000" />
-      <workItem from="1606666931870" duration="9753000" />
+      <workItem from="1606666931870" duration="12291000" />
     </task>
     <servers />
   </component>
@@ -207,14 +207,18 @@
       <screen x="72" y="35" width="1848" height="1045" />
     </state>
     <state x="927" y="244" width="701" height="684" key="NewPhpClassDialog/72.35.1848.1045@72.35.1848.1045" timestamp="1606357335537" />
+    <state x="706" y="170" width="570" height="781" key="RollbackChangesDialog" timestamp="1606681697624">
+      <screen x="72" y="35" width="1848" height="1045" />
+    </state>
+    <state x="706" y="170" width="570" height="781" key="RollbackChangesDialog/72.35.1848.1045@72.35.1848.1045" timestamp="1606681697624" />
     <state x="360" y="105" width="1271" height="912" key="SettingsEditor" timestamp="1606670425303">
       <screen x="72" y="35" width="1848" height="1045" />
     </state>
     <state x="360" y="105" width="1271" height="912" key="SettingsEditor/72.35.1848.1045@72.35.1848.1045" timestamp="1606670425303" />
-    <state x="653" y="234" width="977" height="672" key="find.popup" timestamp="1606670405221">
+    <state x="653" y="234" width="977" height="672" key="find.popup" timestamp="1606681839637">
       <screen x="72" y="35" width="1848" height="1045" />
     </state>
-    <state x="653" y="234" width="977" height="672" key="find.popup/72.35.1848.1045@72.35.1848.1045" timestamp="1606670405221" />
+    <state x="653" y="234" width="977" height="672" key="find.popup/72.35.1848.1045@72.35.1848.1045" timestamp="1606681839637" />
     <state x="576" y="250" key="run.anything.popup" timestamp="1606349854920">
       <screen x="72" y="35" width="1848" height="1045" />
     </state>
