@@ -3,5 +3,15 @@
 {% block title %}Hello RegistrationController!{% endblock %}
 
 {% block body %}
-    {{ form(form) }}
+    <div class="section columns">
+        <div class="column"></div>
+        <div class="column is-one-third">
+            <div class="container">
+                <div class="box">
+                    {{ form(form) }}
+                </div>
+            </div>
+        </div>
+        <div class="column"></div>
+    </div>
 {% endblock %}
