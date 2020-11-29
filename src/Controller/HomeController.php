@@ -29,7 +29,7 @@ class HomeController extends AbstractController
     {
         $form = $this->createFormBuilder()
             ->add("post", TextareaType::class)
-            ->add('image', FileType::class)
+            ->add('image', FileType::class, ['required' => false])
             ->add('submit', SubmitType::class)
             ->getForm();
 

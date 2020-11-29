@@ -16,7 +16,7 @@ class ProfileEditType extends AbstractType
         $builder
             ->add('city')
             ->add('about')
-            ->add('image', FileType::class, ['data_class' => null])
+            ->add('image', FileType::class, ['data_class' => null, 'required' => false])
             ->add('update', SubmitType::class, [
                 'attr' => [
                     'class' => 'button is-primary'
