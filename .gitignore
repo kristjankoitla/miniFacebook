@@ -9,4 +9,5 @@
 /vendor/
 /public/router.php
 /public/uploads/
+/.idea/workspace.xml
 ###< symfony/framework-bundle ###

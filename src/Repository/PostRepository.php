@@ -37,6 +37,8 @@ class PostRepository extends ServiceEntityRepository
             ->leftJoin('App\Entity\Friendship', 'f', 'WITH', 'p.user = f.receiver OR p.user = f.initiator')
             ->where('f.initiator = :user')
             ->orWhere('f.receiver = :user')
+            ->andWhere('f.status = 1')
+            ->orWhere('p.user = :user')
             ->setParameter('user', $user)
             ->orderBy('p.id', 'DESC')
             ->getQuery()->getResult();
