@@ -5,9 +5,9 @@ use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\ErrorHandler\Debug;
 use Symfony\Component\HttpFoundation\Request;
 
-require dirname(__DIR__).'/miniFacebook/vendor/autoload.php';
+require dirname(__DIR__).'/prax3/vendor/autoload.php';
 
-(new Dotenv())->bootEnv(dirname(__DIR__).'/miniFacebook/.env');
+(new Dotenv())->bootEnv(dirname(__DIR__).'/prax3/.env');
 
 if ($_SERVER['APP_DEBUG']) {
     umask(0000);

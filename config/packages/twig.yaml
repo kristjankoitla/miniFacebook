@@ -1,0 +1,5 @@
+twig:
+  default_path: '%kernel.project_dir%/templates'
+  form_theme: 'form/bulma_0_3_x_layout.html.twig'
+  globals:
+    imgSrc: '/~krkoit/prax3/public'
