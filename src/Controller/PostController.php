@@ -84,11 +84,12 @@ class PostController extends AbstractController
             return $this->redirect($request->getUri());
         }
 
+        $post->setLikeCount($likeCount);
+
         return $this->render('post/show.html.twig', [
             'post' => $post,
             'comments' => $comments,
             'likeForm' => $likeForm->createView(),
-            'likeCount' => $likeCount,
             'commentForm' => $commentForm->createView()
         ]);
     }
