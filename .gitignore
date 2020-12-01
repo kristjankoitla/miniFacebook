@@ -10,4 +10,5 @@
 /public/router.php
 /public/uploads/
 /.idea/workspace.xml
+/dump/
 ###< symfony/framework-bundle ###

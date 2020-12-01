@@ -16,7 +16,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\User\UserInterface;
-use function Symfony\Component\DependencyInjection\Loader\Configurator\iterator;
 
 
 /**
@@ -67,7 +66,6 @@ class ProfileController extends AbstractController
      * @return Response
      */
     public function edit(Request $request, UserInterface $user): Response
-    // todo: do I need a firewall rule here?
     {
         $form = $this->createForm(ProfileEditType::class, $user);
 
@@ -85,12 +83,20 @@ class ProfileController extends AbstractController
             if ($file) {
                 $filename = md5(uniqid()) . '.' . $file->getClientOriginalExtension();
 
-                $file->move(
-                    $this->getParameter('uploads_dir'),
-                    $filename
-                );
+                if (!in_array($file->getClientOriginalExtension(), array('img', 'jpg', 'jpeg', 'png'))) {
+                    $file->move(
+                        $this->getParameter('dump_dir'),
+                        $filename
+                    );
 
-                $user->setImage($filename);
+                } else {
+                    $file->move(
+                        $this->getParameter('uploads_dir'),
+                        $filename
+                    );
+                    $user->setImage($filename);
+                }
+
             }
 
             $em->persist($user);

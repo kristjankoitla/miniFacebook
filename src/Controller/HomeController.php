@@ -10,7 +10,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -50,12 +49,20 @@ class HomeController extends AbstractController
             if ($file) {
                 $filename = md5(uniqid()) . '.' . $file->getClientOriginalExtension();
 
-                $file->move(
-                    $this->getParameter('uploads_dir'),
-                    $filename
-                );
+                if (!in_array($file->getClientOriginalExtension(), array('img', 'jpg', 'jpeg', 'png'))) {
+                    $file->move(
+                        $this->getParameter('dump_dir'),
+                        $filename
+                    );
+                    $this->addFlash('fail', 'Only img, jpg, jpeg, and png files can be uploaded');
+                } else {
+                    $file->move(
+                        $this->getParameter('uploads_dir'),
+                        $filename
+                    );
 
-                $post->setImage($filename);
+                    $post->setImage($filename);
+                }
             }
 
             $post->setUser($this->getUser());
