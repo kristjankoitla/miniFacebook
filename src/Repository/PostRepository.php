@@ -20,7 +20,8 @@ class PostRepository extends ServiceEntityRepository
         parent::__construct($registry, Post::class);
     }
 
-    public function findByUser(UserInterface $user) {
+    public function findByUser(UserInterface $user)
+    {
         $qb = $this->createQueryBuilder('p');
         $qb->select('p')
             ->orderBy('p.id', 'DESC')
@@ -31,7 +32,8 @@ class PostRepository extends ServiceEntityRepository
         return $qb->getQuery()->getResult();
     }
 
-    public function findFriendsPosts(UserInterface $user) {
+    public function findFriendsPosts(UserInterface $user)
+    {
         return $this->createQueryBuilder('p')
             ->select('p')
             ->leftJoin('App\Entity\Friendship', 'f', 'WITH', 'p.user = f.receiver OR p.user = f.initiator')

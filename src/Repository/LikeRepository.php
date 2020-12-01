@@ -21,7 +21,8 @@ class LikeRepository extends ServiceEntityRepository
         parent::__construct($registry, Like::class);
     }
 
-    public function getLikesOnPost(Post $post) {
+    public function getLikesOnPost(Post $post)
+    {
         return $this->createQueryBuilder('l')
             ->select('l')
             ->where('l.post = :post')
@@ -29,7 +30,8 @@ class LikeRepository extends ServiceEntityRepository
             ->getQuery()->getResult();
     }
 
-    public function getUserLikeForPost(UserInterface $user, Post $post) {
+    public function getUserLikeForPost(UserInterface $user, Post $post)
+    {
         return $this->createQueryBuilder('l')
             ->select('l')
             ->where('l.post = :post AND l.user = :user')

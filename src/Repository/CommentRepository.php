@@ -20,7 +20,8 @@ class CommentRepository extends ServiceEntityRepository
         parent::__construct($registry, Comment::class);
     }
 
-    public function findCommentsOnPost(Post $post) {
+    public function findCommentsOnPost(Post $post)
+    {
         return $this->createQueryBuilder('c')
             ->select('c')
             ->leftJoin('c.post', 'p')

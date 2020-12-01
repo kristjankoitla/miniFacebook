@@ -18,8 +18,7 @@ class PostType extends AbstractType
                 'attr' => [
                     'class' => 'is-pulled-right'
                 ]
-            ])
-        ;
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)

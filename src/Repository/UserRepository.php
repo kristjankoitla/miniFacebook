@@ -22,7 +22,8 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
         parent::__construct($registry, User::class);
     }
 
-    public function findByEmail(string $email) {
+    public function findByEmail(string $email)
+    {
         return $this->createQueryBuilder('u')
             ->select('u')
             ->where('u.email = :email')
@@ -31,21 +32,23 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
             ->getResult();
     }
 
-    public function findByUuid(string $uuid) {
+    public function findByUuid(string $uuid)
+    {
         $qb = $this->createQueryBuilder('u');
         $qb->select('u.uuid')
             ->where('u.uuid LIKE :word')
-            ->setParameter('word', '%'.$uuid.'%');
+            ->setParameter('word', '%' . $uuid . '%');
 
         return $qb->getQuery()->getResult();
     }
 
-    public function findByString(string $string) {
+    public function findByString(string $string)
+    {
         $qb = $this->createQueryBuilder('u')
             ->select('u')
             ->where('CONCAT(u.firstName, u.lastName) LIKE :word')
             ->orWhere('u.city LIKE :word')
-            ->setParameter('word', '%'.$string.'%');
+            ->setParameter('word', '%' . $string . '%');
 
         return $qb->getQuery()->getResult();
     }

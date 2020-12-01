@@ -110,7 +110,7 @@ class ProfileController extends AbstractController
         ]);
     }
 
-    public function doFriendship(Request $request, UserInterface $currentUser, User $user, Array $friendShips): FormInterface
+    public function doFriendship(Request $request, UserInterface $currentUser, User $user, array $friendShips): FormInterface
     {
         if (count($friendShips) <= 0) {
             $label = 'send_friend_request';

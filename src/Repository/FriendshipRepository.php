@@ -20,7 +20,8 @@ class FriendshipRepository extends ServiceEntityRepository
         parent::__construct($registry, Friendship::class);
     }
 
-    public function findFriendshipByUsers(UserInterface $user1, UserInterface $user2) {
+    public function findFriendshipByUsers(UserInterface $user1, UserInterface $user2)
+    {
         $qb = $this->createQueryBuilder('f');
         $qb->innerJoin('f.initiator', 'i')
             ->innerJoin('f.receiver', 'r')
