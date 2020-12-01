@@ -10,8 +10,15 @@ class ErrorController extends AbstractController
 {
     public function show(\Throwable $exception): Response
     {
+        try {
+            $code = $exception->getStatusCode();
+        } catch (\Throwable $exception) {
+            $code = "500";
+        }
+
         return $this->render('error/index.html.twig', [
-            'code' => $exception->getStatusCode()
+            'code' => $code
         ]);
     }
+
 }
