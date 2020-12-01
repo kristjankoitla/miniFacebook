@@ -20,7 +20,7 @@ class User implements UserInterface
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=180, unique=true)
+     * @ORM\Column(type="string", length=1000, unique=true)
      */
     private $uuid;
 
@@ -30,27 +30,27 @@ class User implements UserInterface
     private $image;
 
     /**
-     * @ORM\Column(type="string", length=180, unique=true)
+     * @ORM\Column(type="string", length=255, unique=true)
      */
     private $email;
 
     /**
-     * @ORM\Column(type="string", length=180, unique=false)
+     * @ORM\Column(type="string", length=255, unique=false)
      */
     private $firstName;
 
     /**
-     * @ORM\Column(type="string", length=180, unique=false)
+     * @ORM\Column(type="string", length=255, unique=false)
      */
     private $lastName;
 
     /**
-     * @ORM\Column(type="string", length=180, unique=false, nullable=true)
+     * @ORM\Column(type="string", length=255, unique=false, nullable=true)
      */
     private $city;
 
     /**
-     * @ORM\Column(type="string", length=180, unique=false, nullable=true)
+     * @ORM\Column(type="string", length=255, unique=false, nullable=true)
      */
     private $about;
 

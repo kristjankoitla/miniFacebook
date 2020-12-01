@@ -73,6 +73,11 @@ class ProfileController extends AbstractController
 
         $form->handleRequest($request);
 
+        if (strlen($form->getData()->getCity()) >= 255 or strlen($form->getData()->getAbout()) >= 255) {
+            $this->addFlash('fail', "Neither of the fields can contain more than 255 characters.");
+            return $this->redirect($request->getUri());
+        }
+
         if ($form->isSubmitted()) {
             $em = $this->getDoctrine()->getManager();
             $file = $request->files->get('profile_edit')['image'];

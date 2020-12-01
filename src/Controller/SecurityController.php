@@ -68,6 +68,11 @@ class SecurityController extends AbstractController
                 return $this->redirect($this->generateUrl('register'));
             }
 
+            if (strlen($data['email']) >= 255 or strlen($data['first_name']) or strlen($data['last_name']) >= 255) {
+                $this->addFlash('fail', "None of the fields can be longer than 255 characters");
+                return $this->redirect($request->getUri());
+            }
+
             $user = new User();
             $user->setEmail($data['email']);
             $user->setFirstName($data['first_name']);

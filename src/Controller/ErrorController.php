@@ -20,5 +20,4 @@ class ErrorController extends AbstractController
             'code' => $code
         ]);
     }
-
 }

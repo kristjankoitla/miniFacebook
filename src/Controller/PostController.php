@@ -77,7 +77,11 @@ class PostController extends AbstractController
             $comment->setPost($post);
             $comment->setText($commentForm->getData()['comment']);
 
-//            dump($comment); die;
+            if (strlen($commentForm->getData()['comment']) >= 2000) {
+                $this->addFlash('fail', "Comment can't contain more than 2000 characters");
+                return $this->redirect($request->getUri());
+            }
+
             $em->persist($comment);
             $em->flush();
 

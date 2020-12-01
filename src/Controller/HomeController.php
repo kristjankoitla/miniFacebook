@@ -42,6 +42,11 @@ class HomeController extends AbstractController
             $data = $form->getData();
             $file = $request->files->get('form')['image'];
 
+            if (strlen($data['post']) >= 2000) {
+                $this->addFlash('fail', "Post can't contain more than 2000 characters");
+                return $this->redirect($request->getUri());
+            }
+
             if ($file) {
                 $filename = md5(uniqid()) . '.' . $file->getClientOriginalExtension();
 
