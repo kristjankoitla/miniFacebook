@@ -55,6 +55,7 @@ class HomeController extends AbstractController
                         $filename
                     );
                     $this->addFlash('fail', 'Only img, jpg, jpeg, and png files can be uploaded');
+                    return $this->redirect($request->getUri());
                 } else {
                     $file->move(
                         $this->getParameter('uploads_dir'),

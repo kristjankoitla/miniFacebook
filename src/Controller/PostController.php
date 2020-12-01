@@ -47,7 +47,6 @@ class PostController extends AbstractController
         $likeForm->handleRequest($request);
 
         if ($likeForm->isSubmitted() && $likeForm->isValid()) {
-//            dump($likeForm); die;
             $em = $this->getDoctrine()->getManager();
 
             if (count($userLike) >= 1) {

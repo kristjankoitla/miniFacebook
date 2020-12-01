@@ -95,12 +95,12 @@ class ProfileController extends AbstractController
                         $filename
                     );
                     $user->setImage($filename);
+
+                    $em->persist($user);
+                    $em->flush();
                 }
 
             }
-
-            $em->persist($user);
-            $em->flush();
 
             return $this->redirect($this->generateUrl('profile.view', ['uuid' => $this->getUser()->getUuid()]));
         }
