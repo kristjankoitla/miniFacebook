@@ -20,7 +20,7 @@ class User implements UserInterface
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=1000, unique=true)
+     * @ORM\Column(type="string", length=512, unique=true)
      */
     private $uuid;
 

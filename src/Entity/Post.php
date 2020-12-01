@@ -23,7 +23,7 @@ class Post
     private $user;
 
     /**
-     * @ORM\Column(type="string", length=2000)
+     * @ORM\Column(type="string", length=2048)
      */
     private $text;
 
