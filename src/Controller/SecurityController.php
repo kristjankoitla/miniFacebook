@@ -45,6 +45,7 @@ class SecurityController extends AbstractController
      * @Route("/register", name="register")
      * @param Request $request
      * @param UserPasswordEncoderInterface $passwordEncoder
+     * @param UserRepository $userRepository
      * @return Response
      */
     public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder, UserRepository $userRepository): Response
@@ -60,6 +61,11 @@ class SecurityController extends AbstractController
             $userCount = count($userRepository->findByUuid($uuid));
             if ($userCount >= 1) {
                 $uuid = $uuid . '-' . $userCount;
+            }
+
+            if (count($userRepository->findByEmail($data['email'])) >= 1) {
+                $this->addFlash('fail', 'Email "' . $data['email'] . '" is taken');
+                return $this->redirect($this->generateUrl('register'));
             }
 
             $user = new User();

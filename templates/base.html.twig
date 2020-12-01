@@ -9,6 +9,16 @@
     </head>
     <body class="has-background-primary">
         {% include 'navbar/navbar.html.twig' %}
+        {% for message in app.flashes('fail') %}
+            <div class="notification is-danger">
+                {{ message }}
+            </div>
+        {% endfor %}
+        {% for message in app.flashes('success') %}
+            <div class="notification is-success">
+                {{ message }}
+            </div>
+        {% endfor %}
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
         <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
